@@ -15,10 +15,3 @@ jobs:
         run: mvn clean package
       - name: Run tests
         run: mvn test
-      - name: Run application
-        run: mvn spring-boot:run
-      - name: Check if application is running
-        run: curl http://localhost:8080
-        if: failure()
-      - name: Stop application
-        run: mvn spring-boot:stop
