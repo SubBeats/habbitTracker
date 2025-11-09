@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @Transactional
 class HabitServiceTest {
 
+    @SuppressWarnings("resource")
     @Container
     static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16")
             .withDatabaseName("testdb")
