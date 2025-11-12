@@ -1,0 +1,40 @@
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+pom.xml
+
+# Исходный код (нам нужен только собранный JAR)
+src/
+
+# IDE файлы
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# GitHub Actions (не нужны в образе)
+.github/
+
+# Документация
+README.md
+HELP.md
+
+# Docker файлы (чтобы не копировать сам Dockerfile в образ)
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Target директория (кроме JAR файла)
+target/*
+!target/*.jar
+
+# Логи и временные файлы
+*.log
+*.tmp
+

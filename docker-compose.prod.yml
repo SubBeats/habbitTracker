@@ -36,11 +36,11 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
     volumes:
-    
       - kafka_data:/tmp/kafka-data
 
   app:
-    image: ${DOCKER_USERNAME:-your-username}/habit-tracker:latest
+    # Для продакшна: используем образ из Docker Hub
+    image: ${DOCKER_USERNAME}/habit-tracker:latest
     container_name: habit-tracker-app
     ports:
       - "8080:8080"
@@ -62,3 +62,4 @@ volumes:
     driver: local
   kafka_data:
     driver: local
+
